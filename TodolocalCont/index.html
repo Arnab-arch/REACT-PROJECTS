@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,4 +10,16 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script>
+  const testSocket = io("http://localhost:5001");
+  testSocket.on("connect", () => console.log("connected!", testSocket.id));
+</script>
+</body>
 </html>

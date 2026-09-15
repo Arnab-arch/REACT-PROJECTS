@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #e8e8e8, #cfcfcf);
+
+  font-family: Arial, sans-serif;
+}
+
+/* Calculator */
+.wrapper {
+  width: 350px;
+  max-width: 90vw;
+
+  padding: 20px;
+
+  background: #222;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Display */
+.display {
+  width: 100%;
+  height: 90px;
+
+  margin-bottom: 15px;
+  padding: 12px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  background: #333;
+  color: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.expression {
+  width: 100%;
+
+  text-align: right;
+
+  font-size: 17px;
+  font-weight: normal;
+
+  color: #aaa;
+
+  min-height: 22px;
+}
+
+.current {
+  width: 100%;
+
+  text-align: right;
+
+  font-size: 34px;
+  font-weight: bold;
+
+  color: white;
+}
+
+/* Buttons */
+.ButtonBox {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+.Button {
+  height: 65px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #444;
+  color: white;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    transform 0.1s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.Button:hover {
+  background: #555;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Button:active {
+  transform: scale(0.94);
+}
+
+/* Equals button */
+.equals {
+  background: #f39c12;
+}
+
+.equals:hover {
+  background: #e67e22;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+  .wrapper {
+    width: 95vw;
+    padding: 15px;
+  }
+
+  .display {
+    height: 80px;
+  }
+
+  .current {
+    font-size: 30px;
+  }
+
+  .Button {
+    height: 60px;
+    font-size: 20px;
+  }
+}
